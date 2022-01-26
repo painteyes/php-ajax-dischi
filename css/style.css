@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+body {
+    font-family: "Roboto";
+    background-color: #1e2d3b; 
+}
+
+header {
+    background-color: #2e3a46;
+    padding: 10px 30px;
+}
+
+header img{
+    width: 50px;
+}
+
+section {
+    color: white;
+}
+
+.container{
+    width: 70%;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.single-album{
+    background-color: #2e3a46;
+    padding: 10px;
+    margin: 15px ;
+    width: calc((100% / 5) - 30px);
+    text-align: center;
+}
+
+.single-album-title{
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 0;
+}
+
+.single-album-author{
+    color: #808080;
+    font-size: 15px;
+}
+
+.single-album-year{
+    color: #808080;
+    font-size: 14px;
+}
