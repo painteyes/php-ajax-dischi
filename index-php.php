@@ -11,46 +11,42 @@
 </head>
 <body>
 
-<header>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png" alt="">
-</header>
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png" alt="">
+    </header>
 
-<section>
+    <section>
 
-    <!-- <FilterSelected @selectionChanged='setSelectionValue'/> -->
+        <!-- <FilterSelected @selectionChanged='setSelectionValue'/> -->
 
+        <div class='container'>
+
+            <?php foreach($database as $album) { ?>
+
+                <div class="single-album">
+
+                    <div class="single-album-poster">
+                        <img src="<?php echo $album['poster']?>" alt=""> 
+                    </div>
+
+                    <div class="single-album-title"> 
+                        <?php echo $album['title'] ?>
+                    </div>
+
+                    <div class="single-album-author">
+                        <?php echo $album['author'] ?>
+                    </div>
+
+                    <div class="single-album-year"> 
+                        <?php echo $album['year'] ?>
+                    </div>
+                </div>
+
+            <?php } ?>
+
+        </div>
     
+    </section>
 
-    <div class='container'>
-
-        <?php foreach($database as $album) { ?>
-
-            <div class="single-album">
-
-                <div class="single-album-poster">
-                    <img src="<?php echo $album['poster']?>" alt=""> 
-                </div>
-
-                <div class="single-album-title"> 
-                    <?php echo $album['title'] ?>
-                </div>
-
-                <div class="single-album-author">
-                    <?php echo $album['author'] ?>
-                </div>
-
-                <div class="single-album-year"> 
-                    <?php echo $album['year'] ?>
-                </div>
-            </div>
-
-        <?php } ?>
-
-    </div>
-  
-</section>
-
-
-    
 </body>
 </html>

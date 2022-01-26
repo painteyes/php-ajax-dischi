@@ -13,14 +13,13 @@ const app = new Vue ({
             axios.get('http://localhost:8888/php-ajax-dischi/server.php')
             .then((response) => {
                this.database = response.data;
-               console.log(this.database);
+               console.log(this.database)
             });
         }
     },
 
     created: function() {
         this.getAlbumApi();
-        // console.log(this.database);
     }
 
 })
