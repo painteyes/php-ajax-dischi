@@ -1,8 +1,11 @@
-<?php require __DIR__ . '/database.php' 
+<?php 
 
-$ json = json_encode($databse);
+require __DIR__ . '/database.php'; 
+
+$json = json_encode($database);
 
 header('Content-Type: application/json');
 
 echo $json;
+
 ?>;

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script type='text/javascript' src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script type='text/javascript' src="https://cdn.cloudfare.come/ajax/libs/0.20/axios.min.js"></script>
+    <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 </head>
 <body>
 
@@ -24,24 +24,22 @@
 
             <div class="container"> 
 
-                <AlbumCard v-for="(element,index) in filteredAlbums()" :key="index" />
-
-                <div class="single-album">
+                <div class="single-album" v-for="album in database">
 
                     <div class="single-album-poster">
-                        <img :src="albumObject.poster" alt="">
+                        <img :src="album.poster" alt="">
                     </div>
 
                     <div class="single-album-title"> 
-                        {{albumObject.title}}
+                        {{album.title}}
                     </div>
 
                     <div class="single-album-author">
-                        {{albumObject.author}}
+                        {{album.author}}
                     </div>
 
                     <div class="single-album-year"> 
-                        {{albumObject.year}}
+                        {{album.year}}
                     </div>
 
                 </div>
@@ -52,7 +50,7 @@
 
     </div>
 
-    <script src='js/script.js'></script>
+    <script type='text/javascript' src='js/script.js'></script>
     
 </body>
 </html>
